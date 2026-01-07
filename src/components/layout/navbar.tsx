@@ -24,6 +24,22 @@ export function Navbar() {
             About
           </Link>
         </li>
+        <li>
+          <Link
+            to="/project"
+            className="font-medium text-gray-600 transition-colors duration-200 hover:text-gray-900"
+          >
+            Project
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contact"
+            className="font-medium text-gray-600 transition-colors duration-200 hover:text-gray-900"
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );
