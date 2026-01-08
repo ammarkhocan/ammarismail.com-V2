@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
+    <nav className="fixed top-0 z-50 w-full border-b bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-gray-800">
