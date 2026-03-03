@@ -40,10 +40,10 @@ export function Navbar() {
 
             <li>
               <NavLink
-                to="/project"
+                to="/projects"
                 className={({ isActive }) => (isActive ? activeLink : baseLink)}
               >
-                Project
+                Projects
               </NavLink>
             </li>
 
@@ -101,8 +101,8 @@ export function Navbar() {
                 <NavLink to="/about" className={baseLink}>
                   About
                 </NavLink>
-                <NavLink to="/project" className={baseLink}>
-                  Project
+                <NavLink to="/projects" className={baseLink}>
+                  Projects
                 </NavLink>
                 <NavLink to="/contact" className={baseLink}>
                   Contact
