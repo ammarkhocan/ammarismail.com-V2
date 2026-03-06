@@ -50,7 +50,7 @@ export function App() {
           <div className="flex justify-center md:justify-start">
             <div className="relative h-56 w-56 md:h-72 md:w-72">
               <div className="absolute inset-0 rounded-full border border-white/10 bg-white/3" />
-              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-xl opacity-60" />
+              <div className="absolute -inset-2 rounded-full bg-linear-to-br from-white/10 to-transparent blur-xl opacity-60" />
 
               <img
                 src="https://17worsb7dw.ucarecd.net/cea206be-5cd8-4fcf-9853-abb4f99318ff/-/preview/971x1000"
@@ -75,7 +75,7 @@ export function App() {
 
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
               <span className="text-white">Hi, I'm</span>{" "}
-              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
                 Ammar
               </span>
               <span className="ml-2 inline-block align-middle text-3xl md:text-5xl">
@@ -253,7 +253,7 @@ export function App() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between relative overflow-hidden group">
+        <div className="mt-20 rounded-3xl border border-white/10 bg-linear-to-br from-white/5 to-transparent p-8 md:p-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 -mt-10 -mr-10 h-40 w-40 rounded-full bg-white/5 blur-3xl transition-all duration-700 group-hover:bg-white/10"></div>
 
           <div className="relative z-10">
