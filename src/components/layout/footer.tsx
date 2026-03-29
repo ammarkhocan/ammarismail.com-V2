@@ -5,7 +5,6 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black text-white">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Left */}
           <div className="text-sm text-white/60 text-center md:text-left">
             © {new Date().getFullYear()} Ammar Ismail Khocan.
             <span className="block md:inline md:ml-2">
@@ -13,10 +12,9 @@ export function Footer() {
             </span>
           </div>
 
-          {/* Right - Social */}
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ammarismailkhocan/"
               target="_blank"
               rel="noreferrer"
               className="text-white/60 hover:text-white transition"
@@ -26,7 +24,7 @@ export function Footer() {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/ammarkhocan"
               target="_blank"
               rel="noreferrer"
               className="text-white/60 hover:text-white transition"
@@ -36,7 +34,7 @@ export function Footer() {
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/ammarkhocan"
               target="_blank"
               rel="noreferrer"
               className="text-white/60 hover:text-white transition"
