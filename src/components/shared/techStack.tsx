@@ -40,10 +40,6 @@ const techStacks: Tech[] = [
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
-  {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  },
 ];
 
 function TechItem({ tech }: { tech: Tech }) {

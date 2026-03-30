@@ -15,28 +15,28 @@ import { Separator } from "@/components/ui/separator";
 export default function About() {
   return (
     <main className="min-h-screen bg-black pt-24 text-white">
-      <div className="mx-auto w-full max-w-6xl px-6 md:px-8 pb-16">
+      <div className="mx-auto w-full max-w-6xl px-6 pb-16 md:px-8">
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">
             <Sparkles className="h-4 w-4" />
             <span>About Me</span>
           </div>
 
-          <h1 className="mt-4 text-3xl md:text-4xl font-bold">
-            Kenalan dulu 👋
+          <h1 className="mt-4 text-3xl font-bold md:text-4xl">
+            Let's get to know each other 👋
           </h1>
-          <p className="mt-2 text-sm md:text-base text-white/60 max-w-2xl">
-            Cerita singkat tentang saya, apa yang saya suka bangun, dan
-            teknologi yang saya pakai.
+          <p className="mt-2 max-w-2xl text-sm text-white/60 md:text-base">
+            A brief story about me, what I love to build, and the technologies I
+            use.
           </p>
         </div>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
+        <section className="grid grid-cols-1 items-start gap-14 md:grid-cols-2">
           <div className="space-y-5">
             <img
               src="https://17worsb7dw.ucarecd.net/cea206be-5cd8-4fcf-9853-abb4f99318ff/-/preview/971x1000"
               alt="Ammar Ismail Khocan"
-              className="w-full max-w-90 rounded-2xl border border-white/10 object-cover"
+              className="max-w-90 w-full rounded-2xl border border-white/10 object-cover"
             />
 
             <div className="flex flex-wrap gap-2">
@@ -55,25 +55,27 @@ export default function About() {
             </div>
           </div>
 
-          <div className="space-y-6 text-white/70 leading-relaxed">
+          <div className="space-y-6 leading-relaxed text-white/70">
             <p>
-              Hi,{" "}
-              <span className="text-white font-medium">
+              Hi, I'm{" "}
+              <span className="font-medium text-white">
                 Ammar Ismail Khocan
               </span>
-              . I started my journey as a web developer with a strong passion
-              for building modern web applications using React and JavaScript.
+              , a web developer based in Indonesia. I spend most of my time
+              working with React and Tailwind, turning static designs into
+              interactive and responsive web apps.
             </p>
 
             <p>
-              Currently, I'm focused on improving my skills in both frontend and
-              backend development. In the past, I've worked on various projects
-              that have helped me grow as a full-stack developer.
+              I like keeping things simple and clean, both in UI design and in
+              my code. Lately, I've been diving deeper into full-stack
+              development, figuring out how the backend connects with the
+              frontend to build complete products.
             </p>
 
             <p>
-              I enjoy clean user interfaces, solving real-world problems through
-              code, and working on side projects.
+              When I'm not writing code or debugging errors, you can usually
+              find me playing video games or working out.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -100,44 +102,50 @@ export default function About() {
           <h2 className="text-2xl font-bold">What I Do</h2>
 
           <div className="grid gap-4 md:grid-cols-3">
-            <Card className="bg-white/5 border-white/10">
+            <Card className="border-white/10 bg-white/5">
               <CardHeader>
-                <CardTitle className="text-base">
+                <CardTitle className="text-base text-white">
                   Frontend Development
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-white/60">
-                Build responsive UI, reusable components, and smooth
-                interactions with React + Tailwind.
+                Writing clean, functional React code. I care about how things
+                look, but I care even more about how they work under the hood.
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 border-white/10">
+            <Card className="border-white/10 bg-white/5">
               <CardHeader>
-                <CardTitle className="text-base">UI Component Design</CardTitle>
+                <CardTitle className="text-base text-white">
+                  UI/UX Implementation
+                </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-white/60">
-                Create consistent design systems using shadcn/ui, good spacing,
-                and clean layouts.
+                Translating Figma designs into actual web pages. I try my best
+                to pay attention to spacing, colors, and responsive layouts.
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 border-white/10">
+            <Card className="border-white/10 bg-white/5">
               <CardHeader>
-                <CardTitle className="text-base">Learning & Building</CardTitle>
+                <CardTitle className="text-base text-white">
+                  Tinkering & Learning
+                </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-white/60">
-                Improve skills by shipping projects, exploring best practices,
-                and trying new tools.
+                Building side projects just to see how things work. Currently
+                exploring how to write better and more maintainable backend
+                code.
               </CardContent>
             </Card>
           </div>
         </section>
 
         <section id="tech-stack" className="mt-20 text-center">
-          <h2 className="text-2xl font-bold mb-3">My Tech Stacks</h2>
-          <p className="text-sm text-white/60 mb-10">
-            Tools yang sering saya gunakan untuk membangun aplikasi web.
+          <h2 className="mb-3 text-2xl font-bold">My Tech Stack</h2>
+          <p className="mb-10 text-sm text-white/60">
+            The tools and technologies I frequently use to build web
+            applications.
           </p>
 
           <TechStackCarousel />
