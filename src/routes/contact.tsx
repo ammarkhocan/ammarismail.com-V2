@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
+import SEO from "@/components/shared/seo";
 
 export default function Contact() {
   const MY_EMAIL = "youremail@gmail.com";
@@ -36,6 +37,10 @@ export default function Contact() {
 
   return (
     <main className="min-h-[calc(100vh-6.3rem)] bg-black pt-24 text-white">
+      <SEO
+        title="Contact"
+        description="Portfolio of Ammar Ismail Khocan, a Frontend Web Developer building fast and interactive web applications."
+      />
       <section className="mx-auto w-full max-w-6xl px-6 pb-10 md:px-8">
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">

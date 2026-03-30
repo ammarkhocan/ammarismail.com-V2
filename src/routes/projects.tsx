@@ -9,6 +9,7 @@ import ProjectCard from "@/components/shared/projectCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
+import SEO from "@/components/shared/seo";
 
 function getUniqueCategories(projects: Project[]) {
   const categories = new Set<string>();
@@ -54,6 +55,10 @@ export default function Projects() {
 
   return (
     <main className="min-h-screen bg-black pt-24 text-white">
+      <SEO
+        title="Projects"
+        description="Portfolio of Ammar Ismail Khocan, a Frontend Web Developer building fast and interactive web applications."
+      />
       <section className="mx-auto w-full max-w-6xl px-6 pb-16 md:px-8">
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">

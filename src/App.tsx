@@ -13,6 +13,8 @@ import { Separator } from "@/components/ui/separator";
 import ProjectCard from "@/components/shared/projectCard";
 import { projectsData } from "@/data/projects";
 
+import SEO from "@/components/shared/seo";
+
 export function App() {
   const featuredProjects = projectsData
     .filter((project) => project.featured)
@@ -21,6 +23,10 @@ export function App() {
 
   return (
     <main className="min-h-screen font-sans text-white selection:bg-white/30 bg-black">
+      <SEO
+        title="Ammar Ismail Khocan"
+        description="Portfolio of Ammar Ismail Khocan, a Frontend Web Developer building fast and interactive web applications."
+      />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,var(--tw-gradient-stops))] from-white/4 via-black to-black" />
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-14 pt-24 md:px-8">
