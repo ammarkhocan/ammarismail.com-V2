@@ -101,16 +101,6 @@ export function App() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-
-              <Button
-                variant="outline"
-                className="border-white/15 bg-transparent rounded-full px-6 hover:bg-white/5"
-                asChild
-              >
-                <Link to="/contact" className="gap-2">
-                  Contact Me <Mail className="h-4 w-4" />
-                </Link>
-              </Button>
             </div>
 
             <div className="mt-7 flex items-center gap-2 text-white/70">
