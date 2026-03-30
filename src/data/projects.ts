@@ -10,7 +10,7 @@ export const projectsData: Project[] = [
       "https://17worsb7dw.ucarecd.net/5e3760d7-71c2-4056-ac80-5ae44896cefe/-/preview/1000x457",
     repo: "https://github.com/ammarkhocan/address-book",
     demo: "https://address-book.ammarismail.com",
-    featured: false,
+    featured: true,
   },
   {
     title: "Bolisto App",
