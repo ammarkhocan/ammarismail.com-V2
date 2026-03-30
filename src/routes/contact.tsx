@@ -35,8 +35,8 @@ export default function Contact() {
   const isFormValid = senderName.trim() && senderEmail.trim() && message.trim();
 
   return (
-    <main className="min-h-screen bg-black pt-24 text-white">
-      <section className="mx-auto w-full max-w-6xl px-6 pb-16 md:px-8">
+    <main className="min-h-[calc(100vh-6.3rem)] bg-black pt-24 text-white">
+      <section className="mx-auto w-full max-w-6xl px-6 pb-10 md:px-8">
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">
             <Sparkles className="h-4 w-4" />
@@ -80,7 +80,7 @@ export default function Contact() {
 
                 <div className="grid gap-3 sm:grid-cols-2">
                   <a
-                    href="www.linkedin.com/in/ammarismailkhocan"
+                    href="https://www.linkedin.com/in/ammarismailkhocan"
                     target="_blank"
                     rel="noreferrer"
                     className="rounded-xl border border-white/10 bg-black/20 p-4 transition hover:bg-white/5"
