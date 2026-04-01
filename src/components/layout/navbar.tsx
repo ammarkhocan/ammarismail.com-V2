@@ -1,23 +1,24 @@
 import { Link, NavLink } from "react-router";
-import { Menu, Download, Moon } from "lucide-react";
+import { Menu, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "../mode-toggle";
 
 export function Navbar() {
   const baseLink =
-    "text-sm font-medium text-white/70 hover:text-white transition-colors";
+    "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors";
 
   const activeLink =
-    "text-sm font-medium text-white relative after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-white";
+    "text-sm font-medium text-foreground relative after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-foreground";
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/60 backdrop-blur-xl">
+    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl transition-colors duration-300">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
-        <Link to="/" className="text-xl md:text-2xl font-bold text-white">
-          Ammar<span className="text-white/50">.</span>
+        <Link to="/" className="text-xl font-bold text-foreground md:text-2xl">
+          Ammar<span className="text-muted-foreground">.</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden items-center gap-10 md:flex">
           <ul className="flex items-center gap-8">
             <li>
               <NavLink
@@ -28,7 +29,6 @@ export function Navbar() {
                 Home
               </NavLink>
             </li>
-
             <li>
               <NavLink
                 to="/about"
@@ -37,7 +37,6 @@ export function Navbar() {
                 About
               </NavLink>
             </li>
-
             <li>
               <NavLink
                 to="/projects"
@@ -46,7 +45,6 @@ export function Navbar() {
                 Projects
               </NavLink>
             </li>
-
             <li>
               <NavLink
                 to="/contact"
@@ -57,18 +55,10 @@ export function Navbar() {
             </li>
           </ul>
 
-          {/* Right actions */}
           <div className="flex items-center gap-3">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white/80 hover:text-white hover:bg-white/10"
-              aria-label="Toggle theme"
-            >
-              <Moon className="h-5 w-5" />
-            </Button>
+            <ModeToggle />
 
-            <Button asChild>
+            <Button asChild className="rounded-full">
               <a href="/resume.pdf" download className="gap-2">
                 <Download className="h-4 w-4" />
                 Resume
@@ -84,7 +74,7 @@ export function Navbar() {
               <Button
                 size="icon"
                 variant="ghost"
-                className="text-white/80 hover:text-white hover:bg-white/10"
+                className="text-muted-foreground hover:bg-accent hover:text-accent-foreground"
               >
                 <Menu className="h-6 w-6" />
               </Button>
@@ -92,7 +82,7 @@ export function Navbar() {
 
             <SheetContent
               side="right"
-              className="w-70 border-white/10 bg-black/90 text-white backdrop-blur-xl"
+              className="w-70 border-border bg-background/95 text-foreground backdrop-blur-xl"
             >
               <div className="mt-10 flex flex-col gap-6">
                 <NavLink to="/" className={baseLink}>
@@ -108,19 +98,15 @@ export function Navbar() {
                   Contact
                 </NavLink>
 
-                <div className="pt-4 border-t border-white/10 space-y-3">
-                  <Button
-                    variant="outline"
-                    className="w-full border-white/15 bg-transparent text-white hover:bg-white/10"
-                  >
-                    <Moon className="mr-2 h-4 w-4" />
-                    Theme (later)
-                  </Button>
+                <div className="space-y-3 border-t border-border pt-4">
+                  <div className="flex items-center justify-between px-1">
+                    <span className="text-sm font-medium text-muted-foreground">
+                      Theme
+                    </span>
+                    <ModeToggle />
+                  </div>
 
-                  <Button
-                    asChild
-                    className="w-full bg-white text-black hover:bg-white/90"
-                  >
+                  <Button asChild className="w-full">
                     <a href="/resume.pdf" download className="gap-2">
                       <Download className="h-4 w-4" />
                       Download Resume
