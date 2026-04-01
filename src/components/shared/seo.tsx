@@ -8,8 +8,6 @@ interface SEOProps {
 export default function SEO({ title, description }: SEOProps) {
   const siteName = "Ammar Ismail Khocan";
 
-  // LOGIKA BARU: Jika title sama dengan siteName, tampilkan namanya saja.
-  // Jika beda, baru tambahkan " | Ammar Ismail Khocan"
   const fullTitle = title === siteName ? siteName : `${title} - ${siteName}`;
 
   return (
