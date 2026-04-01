@@ -59,7 +59,12 @@ export function Navbar() {
             <ModeToggle />
 
             <Button asChild className="rounded-full">
-              <a href="/resume.pdf" download className="gap-2">
+              <a
+                href="https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="gap-2"
+              >
                 <Download className="h-4 w-4" />
                 Resume
               </a>
@@ -106,10 +111,15 @@ export function Navbar() {
                     <ModeToggle />
                   </div>
 
-                  <Button asChild className="w-full">
-                    <a href="/resume.pdf" download className="gap-2">
+                  <Button asChild className="rounded-full">
+                    <a
+                      href="https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="gap-2"
+                    >
                       <Download className="h-4 w-4" />
-                      Download Resume
+                      Resume
                     </a>
                   </Button>
                 </div>

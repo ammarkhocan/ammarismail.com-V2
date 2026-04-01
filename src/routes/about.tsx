@@ -82,13 +82,13 @@ export default function About() {
 
             <div className="flex flex-wrap gap-3 pt-2">
               <Button asChild>
-                <a href="/resume.pdf" download className="gap-2">
+                <a
+                  href="https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing"
+                  target="_blank"
+                  className="gap-2"
+                >
                   Download Resume <Download className="h-4 w-4" />
                 </a>
-              </Button>
-
-              <Button variant="outline" className="bg-transparent" asChild>
-                <a href="#tech-stack">My Tech Stack</a>
               </Button>
             </div>
           </div>
