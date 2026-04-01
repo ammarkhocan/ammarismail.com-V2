@@ -9,8 +9,8 @@ export default function ProjectCard({ project }: { project: Project }) {
   const hasDemo = Boolean(project.demo);
 
   return (
-    <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-white/5 pt-0 group">
-      <div className="relative aspect-video w-full overflow-hidden bg-white/5">
+    <Card className="group flex h-full flex-col overflow-hidden pt-0 transition-colors duration-300">
+      <div className="relative aspect-video w-full overflow-hidden bg-muted">
         <img
           src={project.image}
           alt={project.title}
@@ -21,11 +21,12 @@ export default function ProjectCard({ project }: { project: Project }) {
               "https://via.placeholder.com/1200x675?text=Project+Image";
           }}
         />
-        <div className="absolute inset-0 bg-black/30 opacity-0 transition duration-300 group-hover:opacity-100" />
+
+        <div className="absolute inset-0 bg-foreground/10 opacity-0 transition duration-300 group-hover:opacity-100" />
 
         {project.category && (
           <div className="absolute right-3 top-3">
-            <Badge className="border-white/20 bg-black/50 text-white backdrop-blur-sm hover:bg-black/70">
+            <Badge className="border-transparent bg-background/80 text-foreground shadow-sm backdrop-blur-md hover:bg-background/90">
               {project.category}
             </Badge>
           </div>
@@ -33,18 +34,16 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <CardHeader>
-        <CardTitle className="text-base text-white">{project.title}</CardTitle>
-        <p className="text-sm text-white/60">{project.desc}</p>
+        <CardTitle className="text-base text-foreground">
+          {project.title}
+        </CardTitle>
+        <p className="text-sm text-muted-foreground">{project.desc}</p>
       </CardHeader>
 
       <CardContent className="mt-auto space-y-4">
         <div className="flex flex-wrap gap-2">
           {project.stacks.map((stack) => (
-            <Badge
-              key={stack}
-              variant="secondary"
-              className="bg-white/10 text-white/80"
-            >
+            <Badge key={stack} variant="secondary">
               {stack}
             </Badge>
           ))}
@@ -54,7 +53,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <Button
             size="sm"
             variant="outline"
-            className="w-[calc(50%-0.25rem)] border-white/15 bg-transparent text-white hover:bg-white/10"
+            className="w-[calc(50%-0.25rem)] bg-transparent"
             asChild
           >
             <a
