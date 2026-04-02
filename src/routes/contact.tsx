@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import SEO from "@/components/shared/seo";
 
 export default function Contact() {
-  const MY_EMAIL = "youremail@gmail.com";
+  const MY_EMAIL = "me@gmail.com";
 
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");

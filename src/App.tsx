@@ -24,7 +24,7 @@ export function App() {
     <main className="min-h-screen font-sans bg-background text-foreground transition-colors duration-300">
       <SEO
         title="Ammar Ismail Khocan"
-        description="Portfolio of Ammar Ismail Khocan, a Frontend Web Developer building fast and interactive web applications."
+        description="Portfolio of Ammar Ismail Khocan, a Fullstack Web Developer building fast and interactive web applications."
       />
 
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,var(--tw-gradient-stops))] from-foreground/5 via-background to-background transition-colors duration-300" />

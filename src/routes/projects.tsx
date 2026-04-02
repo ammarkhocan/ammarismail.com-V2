@@ -57,7 +57,7 @@ export default function Projects() {
     <main className="min-h-screen bg-background pt-24 text-foreground transition-colors duration-300">
       <SEO
         title="Projects"
-        description="Portfolio of Ammar Ismail Khocan, a Frontend Web Developer building fast and interactive web applications."
+        description="Portfolio of Ammar Ismail Khocan, a Fullstack Web Developer building fast and interactive web applications."
       />
       <section className="mx-auto w-full max-w-6xl px-6 pb-16 md:px-8">
         <div className="mb-10">
