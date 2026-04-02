@@ -1,30 +1,41 @@
 import { Link, NavLink } from "react-router";
 import { Menu, Download } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetDescription,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { ModeToggle } from "../mode-toggle";
 
-export function Navbar() {
-  const baseLink =
-    "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors";
+const RESUME_URL =
+  "https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing";
 
-  const activeLink =
-    "text-sm font-medium text-foreground relative after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-foreground";
+export function Navbar() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl transition-colors duration-300">
+    <nav className="fixed top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
-        <Link to="/" className="text-xl font-bold text-foreground md:text-2xl">
+        <Link to="/" className="text-xl font-bold md:text-2xl">
           Ammar<span className="text-muted-foreground">.</span>
         </Link>
 
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden md:flex items-center gap-10">
           <ul className="flex items-center gap-8">
             <li>
               <NavLink
                 to="/"
                 end
-                className={({ isActive }) => (isActive ? activeLink : baseLink)}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-sm font-medium text-foreground"
+                    : "text-sm font-medium text-muted-foreground hover:text-foreground"
+                }
               >
                 Home
               </NavLink>
@@ -32,7 +43,11 @@ export function Navbar() {
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) => (isActive ? activeLink : baseLink)}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-sm font-medium text-foreground"
+                    : "text-sm font-medium text-muted-foreground hover:text-foreground"
+                }
               >
                 About
               </NavLink>
@@ -40,7 +55,11 @@ export function Navbar() {
             <li>
               <NavLink
                 to="/projects"
-                className={({ isActive }) => (isActive ? activeLink : baseLink)}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-sm font-medium text-foreground"
+                    : "text-sm font-medium text-muted-foreground hover:text-foreground"
+                }
               >
                 Projects
               </NavLink>
@@ -48,7 +67,11 @@ export function Navbar() {
             <li>
               <NavLink
                 to="/contact"
-                className={({ isActive }) => (isActive ? activeLink : baseLink)}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-sm font-medium text-foreground"
+                    : "text-sm font-medium text-muted-foreground hover:text-foreground"
+                }
               >
                 Contact
               </NavLink>
@@ -57,10 +80,9 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <ModeToggle />
-
             <Button asChild className="rounded-full">
               <a
-                href="https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing"
+                href={RESUME_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="gap-2"
@@ -72,57 +94,93 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Mobile */}
-        <div className="md:hidden">
-          <Sheet>
+        <div className="flex items-center gap-2 md:hidden">
+          <ModeToggle />
+
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-              >
-                <Menu className="h-6 w-6" />
+              <Button size="icon" variant="ghost" aria-label="Open menu">
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
 
-            <SheetContent
-              side="right"
-              className="w-70 border-border bg-background/95 text-foreground backdrop-blur-xl"
-            >
-              <div className="mt-10 flex flex-col gap-6">
-                <NavLink to="/" className={baseLink}>
+            <SheetContent side="right" className="w-72 flex flex-col">
+              <VisuallyHidden>
+                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetDescription>Main navigation links</SheetDescription>
+              </VisuallyHidden>
+
+              <div className="flex items-center justify-between py-2">
+                <Link
+                  to="/"
+                  onClick={() => setOpen(false)}
+                  className="text-lg font-bold text-foreground"
+                >
+                  Ammar<span className="text-muted-foreground">.</span>
+                </Link>
+              </div>
+
+              {/* Links */}
+              <nav className="mt-8 flex flex-col gap-4">
+                <NavLink
+                  to="/"
+                  end
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-foreground border-l-2 border-foreground pl-3"
+                      : "font-medium text-muted-foreground hover:text-foreground pl-3"
+                  }
+                >
                   Home
                 </NavLink>
-                <NavLink to="/about" className={baseLink}>
+                <NavLink
+                  to="/about"
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-foreground border-l-2 border-foreground pl-3"
+                      : "font-medium text-muted-foreground hover:text-foreground pl-3"
+                  }
+                >
                   About
                 </NavLink>
-                <NavLink to="/projects" className={baseLink}>
+                <NavLink
+                  to="/projects"
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-foreground border-l-2 border-foreground pl-3"
+                      : "font-medium text-muted-foreground hover:text-foreground pl-3"
+                  }
+                >
                   Projects
                 </NavLink>
-                <NavLink to="/contact" className={baseLink}>
+                <NavLink
+                  to="/contact"
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-foreground border-l-2 border-foreground pl-3"
+                      : "font-medium text-muted-foreground hover:text-foreground pl-3"
+                  }
+                >
                   Contact
                 </NavLink>
+              </nav>
 
-                <div className="space-y-3 border-t border-border pt-4">
-                  <div className="flex items-center justify-between px-1">
-                    <span className="text-sm font-medium text-muted-foreground">
-                      Theme
-                    </span>
-                    <ModeToggle />
-                  </div>
-
-                  <Button asChild className="rounded-full">
-                    <a
-                      href="https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="gap-2"
-                    >
-                      <Download className="h-4 w-4" />
-                      Resume
-                    </a>
-                  </Button>
-                </div>
+              <div className="mt-auto pt-6 border-t border-border">
+                <Button asChild className="rounded-full w-full">
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="gap-2"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
