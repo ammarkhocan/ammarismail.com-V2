@@ -1,73 +1,27 @@
-# React + TypeScript + Vite
+# ammarismail.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the personal website of Ammar Ismail Khocan.
 
-Currently, two official plugins are available:
+I want to show my profile, bio, photo, tech stack, projects, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Links
 
-## React Compiler
+Checkout at [ammarismail.com](https://ammarismail.com)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Social Media
 
-## Expanding the ESLint configuration
+- LinkedIn: [linkedin.com/in/ammarismailkhocan](https://linkedin.com/in/ammarismailkhocan)
+- GitHub: [github.com/ammarkhocan](https://github.com/ammarkhocan)
+- Instagram: [instagram.com/ammarkhocan](https://instagram.com/ammarkhocan)
+- CV/Resume: [View on Google Drive](https://drive.google.com/file/d/1RtU10NXcx-oNOoAgf7EsPI-mGl65XpRD/view?usp=sharing)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Pages
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Home
+- About
+- Projects
+- Contact
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Preview
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Home](https://17worsb7dw.ucarecd.net/ef689f78-195b-4326-98d1-ec29901ae947/-/preview/1000x917)
