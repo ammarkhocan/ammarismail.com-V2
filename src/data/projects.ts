@@ -24,6 +24,17 @@ export const projectsData: Project[] = [
     featured: false,
   },
   {
+    title: "Quiz App Animals",
+    desc: "An interactive quiz application that allows users to answer multiple-choice questions, track scores, and get instant feedback with a responsive and user-friendly interface.",
+    stacks: ["React", "Vite", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
+    category: "Frontend",
+    image:
+      "https://17worsb7dw.ucarecd.net/ebdc65e8-0291-44a9-a85d-4c3a79252dbf/-/preview/1000x478",
+    repo: "https://github.com/ammarkhocan/quiz-app",
+    demo: "https://quiz-app-animals.vercel.app",
+    featured: false,
+  },
+  {
     title: "Football Players API",
     desc: "A RESTful API built with Bun and Hono to manage football players and club data with persistent storage.",
     stacks: ["Bun", "Hono", "TypeScript", "PostgreSQL"],
@@ -31,7 +42,7 @@ export const projectsData: Project[] = [
     image:
       "https://17worsb7dw.ucarecd.net/69badde8-fc6e-46c1-84b8-57bd18969fbf/-/preview/1000x500",
     repo: "https://github.com/ammarkhocan/football-players-api",
-    demo: "",
+    demo: "https://football-players-api.onrender.com",
     featured: false,
   },
   {
@@ -41,7 +52,7 @@ export const projectsData: Project[] = [
       "React Router",
       "TypeScript",
       "Tailwind CSS",
-      "shadcn/ui",
+      "Shadcn/ui",
       "Hono",
       "Prisma",
       "PostgreSQL",
@@ -61,7 +72,7 @@ export const projectsData: Project[] = [
       "React Router",
       "TypeScript",
       "Tailwind CSS",
-      "shadcn/ui",
+      "Shadcn/ui",
       "Hono",
       "Prisma",
       "PostgreSQL",
@@ -71,7 +82,7 @@ export const projectsData: Project[] = [
     image:
       "https://17worsb7dw.ucarecd.net/3bb68342-3a31-417c-a3ff-bb7fdead4f1b/-/preview/1000x952",
     repo: "https://github.com/ammarkhocan/seduh.in",
-    demo: "https://seduh.in.ammarismail.com",
+    demo: "https://seduh-in-web.ammarismail.com",
     featured: true,
   },
 ];
