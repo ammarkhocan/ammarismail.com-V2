@@ -46,6 +46,17 @@ export const projectsData: Project[] = [
     featured: false,
   },
   {
+    title: "Seduhin API",
+    desc: "A scalable RESTful API developed for Seduhin platform, handling product management, user authentication, and transaction processing using a high-performance Bun and Hono stack.",
+    stacks: ["Bun", "Hono", "TypeScript", "PostgreSQL"],
+    category: "Backend",
+    image:
+      "https://17worsb7dw.ucarecd.net/6ffb89dd-4064-48bc-ad17-98f0b87faeef/-/preview/999x478",
+    repo: "https://github.com/ammarkhocan/seduh.in-api",
+    demo: "https://seduh-in-api.ammarismail.com",
+    featured: false,
+  },
+  {
     title: "Acaraga",
     desc: "A fullstack sports event platform that enables users to discover, join, and track events through a personalized dashboard. Built with a scalable layered architecture using React, Hono, and PostgreSQL, with type-safe validation and containerized deployment.",
     stacks: [
