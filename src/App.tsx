@@ -66,7 +66,9 @@ export function App() {
                 👋
               </span>
               <br />
-              <span className="text-foreground/90">Web Developer</span>
+              <span className="text-foreground/90">
+                Web Developer Fullstack
+              </span>
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
